@@ -11,10 +11,42 @@
     <title>Habitat Energy</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <h1>Tender Results</h1>
 
+    <div class="container">
+        <div class="col">
+            <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+                {% for result in tender_results %}
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Market Name: {{result.Market_Name}}</h5>
+                            <li class="card-text"><strong>Date:</strong> {{result.Delivery_Date}}</li>
+                            <li class="card-text"><strong>Unique bid number:</strong> {{result.Unique_bid_number}}</li>
+                            <li class="card-text"><strong>Response Unit:</strong> {{result.Response_Unit}}</li>
+                            <li class="card-text"><strong>Unit type:</strong> {{result.Unit_type}}</li>
+                            <li class="card-text"><strong>Agent Or Applicant:</strong> {{result.Agent_Or_Applicant}}</li>
+                            <li class="card-text"><strong>Related Entity:</strong> {{result.Related_Entity}}</li>
+                            <li class="card-text"><strong>Volume offered:</strong> {{result.Volume_offered}}</li>
+                            <li class="card-text"><strong>Volume Accepted:</strong> {{result.Volume_Accepted}}</li>
+                            <li class="card-text"><strong>Delivery Start:</strong> {{result.Delivery_Start}}</li>
+                            <li class="card-text"><strong>Delivery End:</strong> {{result.Delivery_End}}</li>
+                            <li class="card-text"><strong>Service Duration:</strong> {{result.Service_Duration}}</li>
+                            <li class="card-text"><strong>Availability Fee:</strong> {{result.Availability_Fee}}</li>
+                            <li class="card-text"><strong>Total Cost:</strong> {{result.Total_Cost}}</li>
+                            <li class="card-text"><strong>RTM Or no RTM:</strong> {{result.RTM_Or_no_RTM}}</li>
+                            <li class="card-text"><strong>Accepted Or Rejected:</strong> {{result.Accepted_Or_Rejected}}</li>
+                            <li class="card-text"><strong>Rejection code:</strong> {{result.Rejection_code}}</li>
+                            <li class="card-text"><strong>Technology Type:</strong> {{result.Technology_Type}}</li>
+
+                        </div>
+                    </div>
+                </div>
+              {% endfor %}  
+            </div>
+        </div>
+    </div>
     
-    {{ tender_results }}
     
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
