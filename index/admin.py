@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import tender_result
+from .models import TenderResult
 
 # Register your models here.
 
@@ -14,4 +14,4 @@ class TenderResultAdmin(admin.ModelAdmin):
     ordering = ("pk",)
 
 
-admin.site.register(tender_result, TenderResultAdmin)
+admin.site.register(TenderResult, TenderResultAdmin)

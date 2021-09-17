@@ -1,11 +1,11 @@
 from django.shortcuts import render
-from .models import tender_result
+from .models import TenderResult
 # Create your views here.
 
 
 def index(request):
 
-    tender_results = tender_result.objects.all()
+    tender_results = TenderResult.objects.all()
 
     context = {
         "tender_results": tender_results,

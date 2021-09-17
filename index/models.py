@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class tender_result(models.Model):
+class TenderResult(models.Model):
     Market_Name = models.CharField(max_length=250)
     Delivery_Date = models.CharField(max_length=250)
     Unique_bid_number = models.CharField(max_length=250)
